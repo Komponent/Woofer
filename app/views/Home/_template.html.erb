@@ -1,0 +1,59 @@
+<html>
+<head>
+
+</head>
+<body style="text-align: left">
+
+
+  <div class="box" id="box">
+  <a class="boxclose" id="boxclose"></a>
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|%>
+      <%= f.text_field :email,:required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
+      <%= f.password_field :password,:required=>true %>
+      <%= f.submit 'Sign in' %> </br>
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+      <%= link_to "Forgot your password?", new_password_path('user') %>
+  <% end %>
+
+  <h2>Regístrate</h2>
+
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
+
+      <div class="name">
+        <%= f.text_field :name,:required=>true, :aria_required => true, :placeholder => "Nombre",:size=>20,:maxlength=>18,:pattern=>"[^0-9][A-Za-z]{2,20}" %>
+        <span title="Must be at least two letters, no numbers"></span>
+        <%= f.text_field :surname, :size => 30, :aria_required => true, :placeholder => "Apellidos" %>
+      </div>
+    </br>
+      <div class="email">
+        <%= f.email_field :email, :aria_required => true, :placeholder => "Tu correo electrónico" %>
+      </div>
+      <div class="field">
+        <%= f.email_field :email_confirmation, :size => 66, :aria_required => true, :autocomplete => :off, :placeholder => "Repite tu correo electrónico" %>
+      </div>
+      <div class="field">
+        <%= f.password_field :password, :size => 66, :aria_required => true, :placeholder => "Introduce la contraseña" %>
+      </div>
+      <div class="field">
+        <%= f.date_select :dateofbirth, :start_year => Time.now.year, :end_year => 1900, :use_month_names => %w(Enero Febrero Marzo Abril Mayo Junio Julio Agosto Septiembre Octubre Noviembre Diciembre), :prompt => {:day => "Día", :month => "Mes", :year => "Año"} %>
+      </div>
+      <div class="field">
+        <%= f.label :Hombre %>
+        <%= f.radio_button :gender, "Hombre", :checked => 'checked', :value => 1 %>
+        <%= f.label :Mujer %>
+        <%= f.radio_button :gender, "Mujer", :value => 0 %>
+      </div>
+      <div id="comment-button"><p>
+        <%= image_submit_tag("button.png") %></p>
+      </div>
+
+
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>
+</body>
+</html>
+

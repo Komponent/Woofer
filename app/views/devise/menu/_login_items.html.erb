@@ -1,0 +1,7 @@
+
+<% if user_signed_in? %>
+    <h5 class="alignleft"><i><%=current_user.name%></i></h5>
+    <li class="alignright">
+      <%= link_to('Logout',destroy_user_session_path, :method => :delete) %>
+    </li>
+<% end %>

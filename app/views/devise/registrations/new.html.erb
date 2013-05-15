@@ -1,0 +1,32 @@
+<h2>Regístrate</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+    <div class="field">
+      <%= f.text_field :name,:size=>30,:aria_required=>true,:placeholder=>"Nombre"%>
+      <%= f.text_field :surname,:size=>30,:aria_required=>true,:placeholder=>"Apellidos" %>
+    </div>
+    <div class="field">
+      <%= f.email_field :email,:size=>66,:aria_required=>true,:placeholder=>"Tu correo electrónico" %>
+    </div>
+    <div class="field">
+      <%= f.email_field :email_confirmation, :size=>66,:aria_required=>true,:placeholder=>"Repite tu correo electrónico" %>
+    </div>
+    <div class="field">
+      <%= f.password_field :password,:size=>66,:aria_required=>true,:placeholder=>"Introduce la contraseña" %>
+    </div>
+    <div class="field">
+      <%= f.date_select :dateofbirth ,:start_year=>Time.now.year,:end_year=>1900,:use_month_names=>%w(Enero Febrero Marzo Abril Mayo Junio Julio Agosto Septiembre Octubre Noviembre Diciembre),:prompt=>{:day=>"Día",:month=>"Mes",:year=>"Año"}%>
+    </div>
+    <div class="field">
+      <%= f.label :Hombre %>
+      <%= f.radio_button :gender,"Hombre",:checked=>'checked',:value=>1%>
+      <%= f.label :Mujer %>
+      <%= f.radio_button :gender,"Mujer",:value=>0%>
+    </div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>
