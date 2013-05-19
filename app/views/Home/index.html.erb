@@ -1,5 +1,6 @@
 <html>
 <head>
+  <title><%current_user%></title>
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abril Fatface">
 </head>
 <body>
@@ -7,7 +8,8 @@
   <div class="header__left left">
     <h1 class="header__logo left">
       <a href="/" title="Home" class="sc-border-box">
-        <img src="https://a2.sndcdn.com/assets/images/header/logo-cca39ee6.png" alt="SoundCloud" width="82" height="44" class="header__logoImage">
+        <%=image_tag("logo.png", alt: "Home",:width => "82",:height => "44",class:"header_logoImage")%>
+       <!-- <img src="/assets/images/logo.png" alt="SoundCloud" width="82" height="44" class="header__logoImage">-->
       </a>
     </h1>
   </div>
