@@ -84,7 +84,11 @@ class ProfilesController < ApplicationController
     end
   end
   def auth_user
-    redirect_to root_path unless user_signed_in?
+    unless user_signed_in?
+      respond_to do |format|
+      format.html { redirect_to root_path, notice: 'Your are not allowed. Please, sign up or log in.' }
+    end
+    end
   end
 
 end

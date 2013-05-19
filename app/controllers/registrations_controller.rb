@@ -21,19 +21,7 @@ class RegistrationsController < Devise::RegistrationsController
       if resource.email.blank? or resource.name.blank?
         clean_up_passwords resource
         flash.now[:alert]="error"
-
-        #redirect_to root_path
-
-        #flash[:notice]=flash[:notice].to_a.concat resource.errors.full_messages
       end
-
-      #flash[:notice] =
-      #
-
     end
   end
-
-
-
-
 end

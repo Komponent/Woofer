@@ -1,17 +1,44 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abril Fatface">
-
 </head>
 <body>
+<div class="header_content_login">
+  <div class="header__left left">
+    <h1 class="header__logo left">
+      <a href="/" title="Home" class="sc-border-box">
+        <img src="https://a2.sndcdn.com/assets/images/header/logo-cca39ee6.png" alt="SoundCloud" width="82" height="44" class="header__logoImage">
+      </a>
+    </h1>
+  </div>
+  <div role="search" class="quicksearch headerSearch left">
+    <form action="/search" class="quicksearch__form sc-border-box expanded" style="width: 410px;">
+      <input class="quicksearch__input input g-all-transitions-300" placeholder="Search for people..." type="search" name="q" autocomplete="off" aria-label="Search" aria-autocomplete="list" aria-owns="searchMenuList" x-webkit-speech="">
+      <button class="quicksearch__submit submit" type="submit">Search</button>
+    </form>
+  </div>
+</div>
 
 <div class="content">
+
   <!-- The activator -->
-  <a class="activator" id="activator"></a>
+ <a class="activator" id="activator"></a>
+  <script type='text/javascript'>
+      $("document").ready(function() {
+          setTimeout(function() {
+              $("#activator").trigger('click');
+          },10);
+      });
+    </script>
 </div>
 
 <div class="overlay" id="overlay" style="display:none;"></div>
 <%= render 'template' %>
+<div id="flash_message">
+  <%= raw show_flash%>
+</div>
+<div class="container">
+<div class="footer" id="footer"><p>© 2013 Woofer </p></div>
+</div>
 </body>
-
 </html>

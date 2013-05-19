@@ -12,4 +12,54 @@
  *= require_tree .
  */
 
+.flash {
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    #text-align: center;
+}
+.flash_notice {
+    left: 370px;
+    text-align: center;
+    position: fixed;
+    bottom: 130px;
+    z-index: 1200;
+    font-size: 22px;
+    color: #ffffff;
+    margin: 0px auto;
+    padding: 4px;
+    max-width: 515px;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #cccccc;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+    transition-delay: 2s;
+    -webkit-transition-delay: 2s;
 
+}
+.flash_error {
+    background: #cc0000;
+    border: 1px solid #cc9999;
+    color: #ffffff;
+    font-size: 13px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+}
+
+.footer{
+    position: absolute;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    bottom: 0px;
+    width: 100%;
+    font-size: 11px;
+    border-top: 2px solid grey;
+    background: -webkit-linear-gradient(black,#333);
+    background: -moz-linear-gradient(black,#333);
+    background: -o-linear-gradient(black,#333);
+    color: whitesmoke;
+    text-align: center;
+}

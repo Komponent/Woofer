@@ -12,3 +12,6 @@ $(function() {
 
 });
 
+setTimeout(function() {
+        $('#flash_message').fadeOut('slow');}, 4000
+);
