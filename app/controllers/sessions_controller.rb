@@ -3,7 +3,7 @@ class SessionsController < Devise::SessionsController
   def new
     unless user_signed_in?
       respond_to do |format|
-        format.html { redirect_to root_path, notice: "We couldn't log you in, email/password are wrong"}
+        format.html { redirect_to root_path, notice: "We couldn't log you in, email/password were wrong"}
       end
       end
   end

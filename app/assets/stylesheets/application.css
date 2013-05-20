@@ -15,19 +15,26 @@
 .flash {
     padding: 5px 10px;
     margin-bottom: 20px;
-    #text-align: center;
+    text-align: center;
 }
 .flash_notice {
-    left: 370px;
     text-align: center;
-    position: fixed;
+    width: 300px;
+    min-height: 80px;
+    #width: 300px;
+    #height: 100px;
+    margin-left: -150px;
+    vertical-align: middle;
+    top:480px;
+    left: 50%;
     bottom: 130px;
-    z-index: 1200;
+    position: fixed;
+    z-index: 3000;
     font-size: 22px;
     color: #ffffff;
-    margin: 0px auto;
+    display: inline-block;
     padding: 4px;
-    max-width: 515px;
+    max-width: 800px;
     background-color: black;
     background: rgba(0, 0, 0, 0.8);
     border: 2px solid #cccccc;
@@ -36,10 +43,9 @@
     -moz-border-radius: 7px;
     -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
-    transition-delay: 2s;
-    -webkit-transition-delay: 2s;
 
 }
+
 .flash_error {
     background: #cc0000;
     border: 1px solid #cc9999;

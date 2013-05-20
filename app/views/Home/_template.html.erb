@@ -8,7 +8,7 @@
   <div class="box" id="box">
   <a class="boxclose" id="boxclose"></a>
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|%>
-      <%= f.text_field :email,:required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
+      <%= f.text_field :email,:required => true,:pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
       <%= f.password_field :password,:required=>true %>
       <%= f.submit 'Sign in' %> </br>
       <%= f.check_box :remember_me %>
@@ -22,8 +22,8 @@
 
 
       <div class="name">
-        <%= f.text_field :name,:required=>true, :aria_required => true, :placeholder => "Nombre",:size=>20,:maxlength=>18,:pattern=>"[^0-9][A-Za-z]{2,20}" %>
-        <span title="Must be at least two letters, no numbers"></span>
+        <%= f.text_field :name,:required=>true, :aria_required => true,:title=>"Name can't be blank", :placeholder => "Nombre",:size=>20,:maxlength=>18,:pattern=>"[^0-9][A-Za-z]{2,20}" %>
+
         <%= f.text_field :surname, :size => 30, :aria_required => true, :placeholder => "Apellidos" %>
       </div>
     </br>
