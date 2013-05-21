@@ -30,6 +30,7 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
+    bcrypt-ruby (3.0.1-x86-mingw32)
     builder (3.0.4)
     coderay (1.0.9)
     coffee-rails (3.2.2)
@@ -64,13 +65,18 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     multi_json (1.7.2)
-    mysql2 (0.3.11)
+    mysql2 (0.3.11-x86-mingw32)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     pry (0.9.12.1)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry (0.9.12.1-x86-mingw32)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+      win32console (~> 1.3)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -126,11 +132,14 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.1)
       rack (>= 1.0)
+    win32console (1.3.2-x86-mingw32)
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
+  bcrypt-ruby
   coffee-rails (~> 3.2.1)
   devise
   devise-async
