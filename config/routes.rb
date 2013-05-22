@@ -3,8 +3,8 @@ DemoProject::Application.routes.draw do
 
   root :to => "home#index"
 
+  resources :home
   resources :profiles,only: [:create, :destroy,:show]
-  resources :search
 
   resources :posts
 
