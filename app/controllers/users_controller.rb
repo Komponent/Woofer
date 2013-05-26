@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  autocomplete(:profile,:alias)
   # GET /users
   # GET /users.json
   def index

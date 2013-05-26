@@ -13,16 +13,18 @@
     </h1>
   </div>
   <div role="search" class="quicksearch headerSearch left">
-    <form action="/home" class="quicksearch__form sc-border-box expanded" id="contacts_search" style="width: 410px;">
-      <p>
-      <input class="quicksearch__input input g-all-transitions-300" placeholder="Search for people..." type="search" name="q" autocomplete="on" aria-label="Search" aria-autocomplete="list" aria-owns="searchMenuList" x-webkit-speech="">
-      <button class="quicksearch__submit submit" type="submit">Search</button>
-      </p>
-      <div id="cresults_div"><%= render 'cresults' %></div>
+    <div role="search" class="quicksearch headerSearch left">
+
+      <form action="/home" class="quicksearch__form sc-border-box expanded" id="contacts_search" style="width: 410px;">
+        <p>
+          <input data-autocomplete="/users/autocomplete_profile_alias"   class="quicksearch__input input g-all-transitions-300" placeholder="Search for people..." type="search" autocomplete="off"  x-webkit-speech="">
+
+        </p>
+
+      </form>
+    </div>
 
 
-
-    </form>
   </div>
 </div>
 

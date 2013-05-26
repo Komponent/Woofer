@@ -1,3 +1,6 @@
+<%= form_for('/users') do |f| %>
+    <%= f.autocomplete_field :profile, autocomplete_profile_alias_users_path %>
+<% end %>
 <h1>Listing users</h1>
 
 <table>

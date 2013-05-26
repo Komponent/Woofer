@@ -3,10 +3,16 @@ DemoProject::Application.routes.draw do
 
   root :to => "home#index"
 
+  resources :users do
+    get :autocomplete_profile_alias, :on => :collection
+  end
+
   resources :home
   resources :profiles,only: [:create, :destroy,:show]
 
   resources :posts
+
+
 
   resources :users
 
