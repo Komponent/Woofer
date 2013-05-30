@@ -11,6 +11,7 @@ gem 'devise'
 gem 'devise-async'
 gem "bcrypt-ruby"
 gem 'rails3-jquery-autocomplete'
+gem 'bxslider-rails'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

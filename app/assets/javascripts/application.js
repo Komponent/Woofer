@@ -12,6 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bxslider
 //= require jquery-ui
 //= require autocomplete-rails
 //= require_tree .
+
+$(document).ready(function(){
+    $(".bxslider").bxSlider({
+        mode: 'horizontal',
+        infiniteLoop: true,
+        hideControlsEnd: false,
+        pager: false
+    });
+});
+

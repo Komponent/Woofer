@@ -9,3 +9,4 @@ jQuery ->
     $.get($("#contacts_search").attr("action"), $("#contacts_search").serialize(), null, 'script')
     false
   )
+
