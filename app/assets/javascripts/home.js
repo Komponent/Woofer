@@ -15,3 +15,9 @@ $(function() {
 setTimeout(function() {
         $('#flash_message').fadeOut('slow');}, 4000
 );
+
+$("document").ready(function() {
+    setTimeout(function() {
+        $("#activator").trigger('click');
+    },10);
+});

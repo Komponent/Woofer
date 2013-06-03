@@ -19,9 +19,19 @@
   -webkit-box-shadow: 0 1px 5px #333;
   z-index:101;
 }
-.bx-pager bx-default-pager{
-
+.bx-wrapper .bx-viewport {
+  -moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  border: solid #fff 0px;
+  left: 0px;
+  background: #fff;
 }
+.bx-wrapper {
+  position: relative;
+  margin-bottom: -5px;
+}
+
 .email_text_box {
   background: url("email_icon.png") no-repeat scroll right center #F5F5DC;
   border: 1px solid #aba;
@@ -174,7 +184,7 @@ h1.header__logo {
   position: absolute;
   padding: 0px 7px 8px 15px;
   width: 200px;
-  z-index: 1;
+  z-index: 0;
   -webkit-transition: width .28s ease;
   -moz-transition: width .28s ease;
   -o-transition: width .28s ease;
@@ -206,5 +216,39 @@ input.quicksearch__input:focus{
 .quicksearch__input[x-webkit-speech]+.quicksearch__submit{display:none}.quicksearch__submit{border:0;padding:0;background:url(https://a2.sndcdn.com/assets/images/header/header-icons-6e938b6a.png) 50% -359px no-repeat;text-indent:22px;overflow:hidden;width:22px;height:19px;position:absolute;right:12px;top:14px}.quicksearch__form.small .quicksearch__input{height:28px;padding:5px 35px 5px 7px;font-size:13px}.quicksearch__form.small .quicksearch__input[x-webkit-speech]{padding:5px 7px}.quicksearch__form.small .quicksearch__submit{top:7px;right:7px}
 
 
+.bx-pager .pager-active, .bx-pager a:hover, .bx-prev:hover, .bx-next:hover {
+  color: #DE312A;
+  text-decoration: none;
+  outline: medium none;
+}
 
+.bx-prev, .bx-next {
+  color: #838383;
+  font-size: 2em;
+  height: 235px;
+  line-height: 240px;
+  overflow: hidden;
+  padding: 0 0.2em;
+  position: absolute;
+  text-align: center;
+  top: -15px;
+  vertical-align: middle;
+  width: 1em;
+}
+
+.bx-prev:hover, .bx-next:hover {
+  background-color: #555555;
+  color: white;
+}
+
+
+.bx-prev {
+  left: -40px;
+  border-radius: 6px 0 0 6px;
+}
+
+.bx-next {
+  right: -65px;
+  border-radius: 0 6px 6px 0;
+}
 

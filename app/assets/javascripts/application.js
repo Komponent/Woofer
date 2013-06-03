@@ -19,10 +19,16 @@
 
 $(document).ready(function(){
     $(".bxslider").bxSlider({
+        adaptiveHeight: true,
         mode: 'horizontal',
         infiniteLoop: true,
         hideControlsEnd: false,
-        pager: false
+        pager:  false,
+        auto:   true,
+        pause: 60000,
+        speed:  7000,
+        controls:   false,
+        oneToOneTouch: true
     });
 });
 

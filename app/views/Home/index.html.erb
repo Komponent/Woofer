@@ -5,56 +5,21 @@
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/ui-darkness/jquery-ui.css" />
 </head>
 <body>
-<div class="header_content_login">
-  <div class="header__left left">
-    <h1 class="header__logo left">
-      <a href="/" title="Home" class="sc-border-box">
-        <%=image_tag("logo.png",:width => "82",:height => "44",:class=>"header_logoImage")%>
-      </a>
-    </h1>
-  </div>
-  <div role="search" class="quicksearch headerSearch left">
-    <div role="search" class="quicksearch headerSearch left">
-
-      <form action="/home" class="quicksearch__form sc-border-box expanded" id="contacts_search" style="width: 410px;">
-        <p>
-          <input data-autocomplete="/users/autocomplete_profile_alias"   class="quicksearch__input input g-all-transitions-300" placeholder="Search for people..." type="search" autocomplete="off"  x-webkit-speech="">
-
-        </p>
-
-      </form>
-    </div>
-
-
-  </div>
-</div>
 
 <div class="content">
-
+  <div class="bxslider">
+    <img src="/assets/8504924049_5f16a109e7_h.jpg" />
+    <li><img src="/assets/8522444133_aeafaf6e59_h.jpg" /></li>
+  </div>
   <!-- The activator -->
  <a class="activator" id="activator"></a>
-  <script type='text/javascript'>
-      $("document").ready(function() {
-          setTimeout(function() {
-              $("#activator").trigger('click');
-          },10);
-      });
-    </script>
 </div>
 
-  <ul class="bxslider">
-    <li><img src="/assets/8504924049_5f16a109e7_h.jpg" width=100% height=100% /></li>
-    <li><img src="/assets/8522444133_aeafaf6e59_h.jpg" width=100% height=100%/></li>
-  </ul>
-
-
-<div class="overlay" id="overlay" style="display:none;"></div>
 <%= render 'template' %>
+
 <div id="flash_message">
     <%= raw show_flash%>
 </div>
-<div class="container">
-<div class="footer" id="footer"><p>© 2013 Woofer </p></div>
-</div>
+
 </body>
 </html>

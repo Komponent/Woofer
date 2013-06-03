@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WooFer</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<div class="header_content_login">
+  <div class="header__left left">
+    <h1 class="header__logo left">
+      <a href="/" title="Home" class="sc-border-box">
+        <%=image_tag("logo.png",:width => "82",:height => "44",:class=>"header_logoImage")%>
+      </a>
+    </h1>
+  </div>
+  <div role="search" class="quicksearch headerSearch left">
+    <div role="search" class="quicksearch headerSearch left">
+      <form action="/home" class="quicksearch__form sc-border-box expanded" id="contacts_search" style="width: 410px;">
+        <p>
+          <input data-autocomplete="/users/autocomplete_profile_alias"   class="quicksearch__input input g-all-transitions-300" placeholder="Search for people..." type="search" autocomplete="off"  x-webkit-speech="">
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+<body>
+
+
+
+
+<%=yield%>
+</body>
+<div class="container">
+  <div class="footer" id="footer"><p>© 2013 Woofer </p></div>
+</div>
+</html>
